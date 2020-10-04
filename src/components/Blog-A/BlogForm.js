@@ -13,11 +13,8 @@ class BlogForm extends Component {
     this.submitForm = this.submitForm.bind(this);
   }
 
-  // event.target.value = is the value of the pressed key
-  // fires everytime user types
   handleChange(event){
-  // [event.target.name] alows you to target  what properity you specifly want to target
-  // calling by refrence is why e.t.n in []
+
   this.setState({[event.target.name]: event.target.value});
   }
 
