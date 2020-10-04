@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import BlogForm from './components/Blog-A/BlogForm';
+import PersonForm from './components/Blog-B/PersonForm';
 
 class App extends Component {
 
