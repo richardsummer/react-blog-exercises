@@ -14,13 +14,13 @@ class BlogForm extends Component {
   }
 
   handleChange(event){
-
-  this.setState({[event.target.name]: event.target.value});
+    this.setState({[event.target.name]: event.target.value});
   }
 
   submitForm(event) {
     event.preventDefault();
-    this.props.saveBlog(this.state);
+    this.setState({title: '', body: ''});
+    alert('Yay! You Sumbitted a Blog!');
   }
 
   render() {

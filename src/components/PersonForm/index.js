@@ -23,17 +23,24 @@ class PersonForm extends Component {
 
   submitForm(event){
     event.preventDefault();
-    this.props.saveBlog(this.state);
+    alert('Yay! You saved a person!');
+    this.setState({
+      firstName: '',
+      lastName: '',
+      address: '',
+      phoneNumber: '',
+    });
+    // this.props.saveBlog(this.state);
   }
 
   render() {
     return (
-      <div className="">
+      <div>
         <form onSubmit={this.submitForm}>
           <input type="text" name="firstName" placeholder="First Name" value={this.state.firstName} onChange={this.handleChange}/>
           <input type="text" name="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleChange}/>
           <input type="text" name="address" placeholder="Address" value={this.state.address} onChange={this.handleChange}/>
-          <input type="text" name="phoneNumber" placeholder="Phone Number" value={this.state.phoneNumber} onChange={this.handleChange}/>
+          <input type="tel" name="phoneNumber" placeholder="Phone Number" value={this.state.phoneNumber} onChange={this.handleChange}/>
           <button>Submit</button>
         </form>
       </div>
